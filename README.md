@@ -167,6 +167,13 @@ Examples include:
 
 ---
 
+# 📄 DAX Formulas
+
+📄 **[Flight_DAX.txt](Flight_DAX.txt)**
+
+---
+
+
 # 🎨 Dashboard Features
 
 - Modern UI
