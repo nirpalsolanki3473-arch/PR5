@@ -1,0 +1,139 @@
+## Parameter Formulas
+
+### P1. Min_Delay_Minutes
+
+```DAX
+Min_Delay_Minutes =
+GENERATESERIES(0,120,15)
+```
+
+### P2. Min_Delay_Minutes Value
+
+```DAX
+Min_Delay_Minutes Value =
+SELECTEDVALUE('Min_Delay_Minutes'[Min_Delay_Minutes], 15)
+```
+
+### P3. Metric_Selector
+
+```DAX
+Metric_Selector =
+{
+    ("Avg_Arr_Delay", NAMEOF('FlightData'[Avg_Arr_Delay]), 0),
+    ("Avg_Dep_Delay", NAMEOF('FlightData'[Avg_Dep_Delay]), 1),
+    ("Total_Cancelled", NAMEOF('FlightData'[Total_Cancelled]), 2),
+    ("Total_Flights", NAMEOF('FlightData'[Total_Flights]), 3),
+    ("On_Time_Rate %", NAMEOF('FlightData'[On_Time_Rate %]), 4)
+}
+```
+
+---
+
+## DAX Measures
+
+### M1. Avg_Arr_Delay
+
+```DAX
+Avg_Arr_Delay =
+CALCULATE(
+    AVERAGE(FlightData[ARR_DELAY]),
+    FlightData[CANCELLED] = 0
+)
+```
+
+### M2. Avg_Arr_Delay_Text
+
+```DAX
+Avg_Arr_Delay_Text =
+FORMAT([Avg_Arr_Delay], "0.0") & " min"
+```
+
+### M3. Avg_Dep_Delay
+
+```DAX
+Avg_Dep_Delay =
+CALCULATE(
+    AVERAGE(FlightData[DEP_DELAY]),
+    FlightData[CANCELLED] = 0
+)
+```
+
+### M4. Cancellation_Rate %
+
+```DAX
+Cancellation_Rate % =
+DIVIDE(
+    [Total_Cancelled],
+    [Total_Flights],
+    0
+)
+```
+
+### M5. Flights_Above_Min_Delay
+
+```DAX
+Flights_Above_Min_Delay =
+CALCULATE(
+    [Total_Flights],
+    FILTER(
+        FlightData,
+        FlightData[ARR_DELAY] >= [Min_Delay_Minutes Value]
+    )
+)
+```
+
+### M6. On_Time_Rate %
+
+```DAX
+On_Time_Rate % =
+AVERAGEX(
+    FILTER(
+        FlightData,
+        FlightData[CANCELLED] = 0 &&
+        FlightData[DIVERTED] = 0
+    ),
+    IF(FlightData[ARR_DELAY] <= 15, 1, 0)
+)
+```
+
+### M7. On_Time_Target
+
+```DAX
+On_Time_Target = 0.80
+```
+
+### M8. Total_Cancelled
+
+```DAX
+Total_Cancelled =
+CALCULATE(
+    COUNTROWS(FlightData),
+    FlightData[CANCELLED] = 1
+)
+```
+
+### M9. Total_Flights
+
+```DAX
+Total_Flights =
+COUNTROWS(FlightData)
+```
+
+---
+
+## Calculated Column
+
+### C1. Delay_Category
+
+```DAX
+Delay_Category =
+SWITCH(
+    TRUE(),
+    FlightData[CANCELLED] = 1, "Cancelled",
+    FlightData[DIVERTED] = 1, "Diverted",
+    FlightData[ARR_DELAY] > 60, "Major Delay (>60 min)",
+    FlightData[ARR_DELAY] > 15, "Minor Delay (15-60 min)",
+    FlightData[ARR_DELAY] <= 15, "On Time",
+    "Other"
+)
+```
