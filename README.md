@@ -207,6 +207,20 @@ Examples include:
 
 ---
 
+# 🖼️ Dashboard Preview
+
+## 1. Executive Dashboard
+
+![Executive Dashboard](Screenshot%202026-07-04%20115640.png)
+
+---
+
+## 2. Delay Analysis
+
+![Delay Analysis](Screenshot%202026-07-04%20115656.png)
+
+---
+
 # 🚀 Business Insights
 
 This dashboard helps users:
