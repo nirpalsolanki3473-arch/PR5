@@ -169,8 +169,7 @@ Examples include:
 
 # 📄 DAX Formulas
 
-📄 **[Flight_DAX.txt](Flight's_DAX.txt)**
-
+📄 **[flight's_DAX.txt](flight%27s_DAX.txt)**
 ---
 
 
