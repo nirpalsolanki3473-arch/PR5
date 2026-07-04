@@ -221,6 +221,19 @@ Examples include:
 
 ---
 
+## 3. Cancellation Analysis
+
+![Cancellation Analysis](Screenshot%202026-07-04%20115711.png)
+
+---
+
+## 4. Airline Performance
+
+![Airline Performance](Screenshot%202026-07-04%20115722.png)
+
+---
+
+
 # 🚀 Business Insights
 
 This dashboard helps users:
