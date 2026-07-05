@@ -215,7 +215,7 @@ Examples include:
 
 # 🖼️ Dashboard Preview
 
-## 1. Executive Dashboard
+## 1. overview
 
 ![Executive Dashboard](Screenshot%202026-07-04%20115640.png)
 
@@ -227,7 +227,7 @@ Examples include:
 
 ---
 
-## 3. route and airport Analysis
+## 3. route and airport
 
 ![Cancellation Analysis](Screenshot%202026-07-04%20115711.png)
 
