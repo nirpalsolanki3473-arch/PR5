@@ -233,7 +233,7 @@ Examples include:
 
 ---
 
-## 4. forecast Analysis
+## 4. trends & forecast Analysis
 
 ![Airline Performance](Screenshot%202026-07-04%20115722.png)
 
