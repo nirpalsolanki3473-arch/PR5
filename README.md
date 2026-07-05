@@ -227,13 +227,13 @@ Examples include:
 
 ---
 
-## 3. Cancellation Analysis
+## 3. route and airport Analysis
 
 ![Cancellation Analysis](Screenshot%202026-07-04%20115711.png)
 
 ---
 
-## 4. trends & forecast Analysis
+## 4. trends & forecast 
 
 ![Airline Performance](Screenshot%202026-07-04%20115722.png)
 
