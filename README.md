@@ -221,7 +221,7 @@ Examples include:
 
 ---
 
-## 2. Delay Analysis
+## 2. Airline Performance
 
 ![Delay Analysis](Screenshot%202026-07-04%20115656.png)
 
@@ -233,7 +233,7 @@ Examples include:
 
 ---
 
-## 4. Airline Performance
+## 4. forecast Analysis
 
 ![Airline Performance](Screenshot%202026-07-04%20115722.png)
 
