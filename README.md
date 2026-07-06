@@ -293,6 +293,13 @@ Flight-Delay-Analysis/
 
 ---
 
+## 🎥 Dashboard Walkthrough
+
+Watch the complete Power BI dashboard demonstration, including KPIs, delay analysis, cancellation analysis, interactive filters, DAX measures, and key business insights.
+
+▶️ **Watch the Demo Video:**  
+https://drive.google.com/file/d/1SnQFutkTsgmH3y2zsyLsfocQqROdazxN/view?usp=drive_link
+
 # 👨‍💻 Author
 
 **Nirpalsinh Solanki**
